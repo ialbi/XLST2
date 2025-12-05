@@ -33,7 +33,7 @@
           <!-- Solo actividades del mes almacenado en $mes, ordenadas por fechaHora -->
           <xsl:apply-templates
             select="actividades/actividad[substring(fechaHora,6,2) = $mes]">
-            <xsl:sort select="fechaHora"/>
+            <xsl:sort select="fechaHora" order="descending"/>
           </xsl:apply-templates>
         </main>
 
